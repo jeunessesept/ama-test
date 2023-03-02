@@ -4,7 +4,7 @@ import express from "express";
 const router = express.Router();  // router définie en tant qu'instance pour créer des routes API
 
  // sélectionner et afficher toutes les tâches stockées dans la database 
-router.get('/', (req, res, next) => { //-> router.get() - route qui permet de récupérer des données depuis l'API
+router.get('/', (req, res) => { //-> router.get() - route qui permet de récupérer des données depuis l'API
     const query = `SELECT * FROM tasks`;  // sélectionne tous les éléments de la table tasks
     dbConnect.query(query, (err, results) => {
         if (err) {
@@ -19,7 +19,7 @@ router.get('/', (req, res, next) => { //-> router.get() - route qui permet de r�
 
 
 //fonction qui permet à l'utilisateur d'ajouter une tâche
-router.post('/postTask', (req, res, next) => { // route qui permet de poster des données dans l'API
+router.post('/postTask', (req, res) => { // route qui permet de poster des données dans l'API
     const { task } = req.body  //=> récupérer la tâche dans le corps de la requête
     const query = `INSERT INTO tasks (task) VALUES (?)`   //la query va ajouter ce qui est entré par l'utilisateur en tant que 'task' dans la table tasks
 
@@ -36,7 +36,7 @@ router.post('/postTask', (req, res, next) => { // route qui permet de poster des
 
 
 // update de la colonne "completed" de la table "tasks" qui va marquer une tâche comme 'done' ou pas
-router.put("/status/:id", (req, res, next) => { // route qui permet d'updater des données de l'API
+router.put("/status/:id", (req, res) => { // route qui permet d'updater des données de l'API
     const task_id = req.params.id      //=> je vais récupérer le id d'une tâche spécifique en tant que paramètre de l'url
 
     const query = `UPDATE tasks SET completed=1 WHERE id= (?)`  //=> dans cette query j'update la colonne 'completed' dont la valeur est un booleen
@@ -54,7 +54,7 @@ router.put("/status/:id", (req, res, next) => { // route qui permet d'updater de
 })
 
  // suppression d'une tâche
-router.delete('/delete/:id',(req, res, next) => { // route qui permet de supprimer des données dans l'API
+router.delete('/delete/:id',(req, res) => { // route qui permet de supprimer des données dans l'API
     const task_id = req.params.id  //=> je vais récupérer le id d'une tâche spécifique en tant que paramètre de l'url
     const query = `DELETE FROM tasks WHERE id = (?)` // la query demande à la database de supprimer dans la table la ligne ayant le id spécifié
 
