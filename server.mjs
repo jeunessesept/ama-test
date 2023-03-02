@@ -3,13 +3,12 @@ import bodyParser from "body-parser";
 
 
 import { dbConnect } from "./config/dbconnect.mjs";
-// import { addTask, getTasks, taskDone, deleteTask } from "./controllers/taskControllers.mjs";
 import taskController from './controllers/taskControllers.mjs'
 
 // je définie 'app' en tant qu'instance d'application express
 const app = express()  
 
-//ici j'assigne des middlewares
+//ici j'assigne des middlewares pour le traitement des requêtes
 app.use(express.json());
 app.use(bodyParser.json());
 
