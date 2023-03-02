@@ -23,10 +23,10 @@ dbConnect.connect((err)=> {
     }
 })
 
-app.use('/tasks', taskController)
+app.use('/tasks', taskController)  //=> utilisation de express.router(), voir ./controllers/taskControllers pour plus de détails
 
 // j'assigne un port au serveur pour créer une connexion
-const PORT = process.env.PORT
+const PORT = process.env.PORT  //PORT fait référence à une variable d'envirronement 
 app.listen(PORT, () => {
     console.log(`app connected to port ${ PORT }`)
 })

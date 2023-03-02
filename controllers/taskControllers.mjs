@@ -1,10 +1,10 @@
 import { dbConnect } from "../config/dbconnect.mjs";  //import de la function qui permet la connexion à MySQL pour la réutiliser dans les fonctions de query
 import express from "express";
 
-const router = express.Router();
+const router = express.Router();  // router définie en tant qu'instance pour créer des routes API
 
  // sélectionner et afficher toutes les tâches stockées dans la database 
-router.get('/', (req, res, next) => {
+router.get('/', (req, res, next) => { //-> router.get() - route qui permet de récupérer des données depuis l'API
     const query = `SELECT * FROM tasks`;  // sélectionne tous les éléments de la table tasks
     dbConnect.query(query, (err, results) => {
         if (err) {
@@ -19,7 +19,7 @@ router.get('/', (req, res, next) => {
 
 
 //fonction qui permet à l'utilisateur d'ajouter une tâche
-router.post('/postTask', (req, res, next) => {
+router.post('/postTask', (req, res, next) => { // route qui permet de poster des données dans l'API
     const { task } = req.body  //=> récupérer la tâche dans le corps de la requête
     const query = `INSERT INTO tasks (task) VALUES (?)`   //la query va ajouter ce qui est entré par l'utilisateur en tant que 'task' dans la table tasks
 
@@ -36,11 +36,11 @@ router.post('/postTask', (req, res, next) => {
 
 
 // update de la colonne "completed" de la table "tasks" qui va marquer une tâche comme 'done' ou pas
-router.put("/status/:id", (req, res, next) => {
+router.put("/status/:id", (req, res, next) => { // route qui permet d'updater des données de l'API
     const task_id = req.params.id      //=> je vais récupérer le id d'une tâche spécifique en tant que paramètre de l'url
 
     const query = `UPDATE tasks SET completed=1 WHERE id= (?)`  //=> dans cette query j'update la colonne 'completed' dont la valeur est un booleen
-                                                                  // 0 veut dire que la tâche n'est pas encore complétée, 1 signifie que la tâche est complétée
+                                                                // 0 veut dire que la tâche n'est pas encore complétée, 1 signifie que la tâche est complétée
 
     dbConnect.query(query,[task_id], (err, results) => {        //je crée une connexion avec la database MySQL pour faire parvenir la query définie plus haut
         if (err){
@@ -54,7 +54,7 @@ router.put("/status/:id", (req, res, next) => {
 })
 
  // suppression d'une tâche
-router.delete('/delete/:id',(req, res, next) => {
+router.delete('/delete/:id',(req, res, next) => { // route qui permet de supprimer des données dans l'API
     const task_id = req.params.id  //=> je vais récupérer le id d'une tâche spécifique en tant que paramètre de l'url
     const query = `DELETE FROM tasks WHERE id = (?)` // la query demande à la database de supprimer dans la table la ligne ayant le id spécifié
 
