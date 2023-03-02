@@ -29,7 +29,7 @@ router.post('/postTask', (req, res, next) => { // route qui permet de poster des
             return res.status(500).send('internal server error')
         }else {                                                 //si pas d'erreur, la requête est menée à bien
             console.log(results)
-            res.status(200).json({info: "task succesfuly added"})       // la réponse retourne un statut indiquant le status de la requête (HTTP 200)
+            res.status(200).json({info: "task succesfully added"})       // la réponse retourne un statut indiquant le status de la requête (HTTP 200)
         }
     })
 })
@@ -48,7 +48,7 @@ router.put("/status/:id", (req, res, next) => { // route qui permet d'updater de
             return res.status(500).send('error when updating the status of the task')
         } else {
             console.log(results)       //si pas d'erreur, la requête est menée à bien
-            return res.status(200).send("status of the task updated") // la réponse retourne un statut indiquant le status de la requête 
+            return res.status(200).json({info: "status of the task updated"}) // la réponse retourne un statut indiquant le status de la requête 
         }
     })
 })
@@ -64,7 +64,7 @@ router.delete('/delete/:id',(req, res, next) => { // route qui permet de supprim
             return res.status(500).send('error when trying to delete the task')
         }else{
             console.log(results)
-            return res.status(200).send("task deleted succesfuly")
+            return res.status(200).json({info: "task deleted succesfully"})
         }
     })
 })
