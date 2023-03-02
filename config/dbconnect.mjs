@@ -7,5 +7,6 @@ export const dbConnect = mysql.createConnection({  //=> instance de connection �
     host: process.env.HOST, // spécifie l'hôte de la database
     user: process.env.USERDB, //spécifie l'utilisateur nécessaire pour se connecter à la database
     password: process.env.PASSWORD, // spécifie le mot de passe pour se connecter à la database
-    database: process.env.DATABASE // le nom de la database
+    database: process.env.DATABASE, // le nom de la database
+    port:8889
 })
