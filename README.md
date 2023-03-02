@@ -1,7 +1,7 @@
 #AMA TEST
 =========
 
-french/ 
+### french/ 
 
 Ceci est un serveur Node.js qui utilise Express et se connecte à une base de données MySQL pour effectuer des opérations CRUD sur des tâches. 
 Le serveur importe les packages requis, y compris Express et Body-parser, et se connecte à la base de données. 
@@ -29,7 +29,7 @@ Si une erreur se produit, un code d'état HTTP 500 est renvoyé avec un message 
 
 
 
-english/ 
+### english/ 
 
 This is a Node.js server that uses Express and connects to a MySQL database to perform CRUD operations on tasks. 
 The server imports the required packages, including Express and Body-parser, and connects to the database. 
