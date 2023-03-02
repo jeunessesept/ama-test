@@ -14,6 +14,16 @@ Le serveur propose quatre routes pour gérer les données de tâche :
 Récupère toutes les tâches stockées dans la base de données et les renvoie sous forme de réponse JSON. 
 Si une erreur se produit, un code d'état HTTP 500 est renvoyé avec un message d'erreur.
 
+```js
+(get) htttps.heroku.myap.com/tasks
+
+------------------------------------
+(data: ["tetst","task2]
+```
+------------------------------------
+
+
+
 ## POST /tasks/postTask : 
 Ajoute une nouvelle tâche à la base de données. La tâche à ajouter est passée dans le corps de la requête. 
 Si une erreur se produit, un code d'état HTTP 500 est renvoyé avec un message d'erreur.
