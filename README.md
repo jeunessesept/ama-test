@@ -15,7 +15,7 @@ Récupère toutes les tâches stockées dans la base de données et les renvoie 
 Si une erreur se produit, un code d'état HTTP 500 est renvoyé avec un message d'erreur.
 
 ```js
-(get) htttps.heroku.myap.com/tasks
+(get) https://ama-test.herokuapp.com/tasks
 
 RESPONSE
 ------------------------------------
@@ -51,7 +51,7 @@ Si une erreur se produit, un code d'état HTTP 500 est renvoyé avec un message 
 
 
 ```js
-(post) htttps.heroku.myap.com/tasks
+(post) https://ama-test.herokuapp.com/tasks/postTask
 
 REQUEST
 ------------------------------------
@@ -75,7 +75,7 @@ La tâche à mettre à jour est identifiée par son ID passé en paramètre dans
 Si une erreur se produit, un code d'état HTTP 500 est renvoyé avec un message d'erreur.
 
 ```js
-(put) 
+(put) https://ama-test.herokuapp.com/tasks/status/:id
 
 RESPONSE
 ------------------------------------
@@ -91,7 +91,7 @@ Supprime une tâche de la base de données. La tâche à supprimer est identifi�
 Si une erreur se produit, un code d'état HTTP 500 est renvoyé avec un message d'erreur.
 
 ```js
-(delete)
+(delete) https://ama-test.herokuapp.com/tasks/delete/:id
 
 RESPONSE
 -------------------------------------
