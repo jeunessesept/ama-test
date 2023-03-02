@@ -13,16 +13,6 @@ const app = express()
 app.use(express.json());
 app.use(bodyParser.json());
 
-//je demande la connexion à la database, si une erreur de connexion survient
-//elle sort dans la console. Sinon, la connexion se fait et nous pouvons commencer à travailler.
-// dbConnect.connect((err)=> {
-//     if(err){
-//         console.error('connection error to the database', err)
-//     } else {
-//         console.log(`you're connected to your database`)
-//     }
-// })
-
 
 app.use('/tasks', taskController)  //=> utilisation de express.router(), voir ./controllers/taskControllers pour plus de détails
 
