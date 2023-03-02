@@ -23,6 +23,10 @@ dbConnect.connect((err)=> {
     }
 })
 
+app.get('/test', (req, res)=> {
+    res.send('<h1> hello </h1>')
+})
+
 app.use('/tasks', taskController)  //=> utilisation de express.router(), voir ./controllers/taskControllers pour plus de détails
 
 // j'assigne un port au serveur pour créer une connexion
