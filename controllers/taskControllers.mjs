@@ -29,7 +29,7 @@ router.post('/postTask', (req, res, next) => { // route qui permet de poster des
             return res.status(500).send('internal server error')
         }else {                                                 //si pas d'erreur, la requête est menée à bien
             console.log(results)
-            res.status(200).send("task succesfuly added")       // la réponse retourne un statut indiquant le status de la requête (HTTP 200)
+            res.status(200).json({info: "task succesfuly added"})       // la réponse retourne un statut indiquant le status de la requête (HTTP 200)
         }
     })
 })
