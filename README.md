@@ -8,7 +8,10 @@ Le serveur importe les packages requis, y compris Express et Body-parser, et se 
 Il utilise ensuite une instance de routeur pour créer des routes API et définir des fonctions qui effectuent des opérations CRUD sur la base de données. 
 Le routeur est ensuite réimporté dans le fichier principal du serveur et monté sur l'endpoint /tasks.
 
-Le serveur propose quatre routes pour gérer les données de tâche :
+Le serveur propose quatre routes pour gérer les données de tâche, vous pouvez accéder à l'API déployé sur Heroku en utilisant ce lien de base :
+
+### https://ama-test.herokuapp.com/tasks
+
 
 ## GET /tasks : 
 Récupère toutes les tâches stockées dans la base de données et les renvoie sous forme de réponse JSON. 
