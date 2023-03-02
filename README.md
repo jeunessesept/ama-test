@@ -49,6 +49,26 @@ RESPONSE
 Ajoute une nouvelle tâche à la base de données. La tâche à ajouter est passée dans le corps de la requête. 
 Si une erreur se produit, un code d'état HTTP 500 est renvoyé avec un message d'erreur.
 
+
+```js
+(post) htttps.heroku.myap.com/tasks
+
+REQUEST
+------------------------------------
+{
+	"task": "make a 8 test"
+}
+------------------------------------
+
+RESPONSE 
+------------------------------------
+
+{
+	"info": "task succesfuly added"
+}
+```
+------------------------------------
+
 ## PUT /tasks/status/:id : 
 Met à jour le statut terminé d'une tâche dans la base de données. 
 La tâche à mettre à jour est identifiée par son ID passé en paramètre dans l'URL. 
