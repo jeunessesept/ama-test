@@ -46,12 +46,12 @@ If an error occurs, a 500 HTTP status code is returned with an error message.
 Adds a new task to the database. The task to be added is passed as the request body. 
 If an error occurs, a 500 HTTP status code is returned with an error message.
 
-## PUT /tasks/status/:id: 
+## PUT /tasks/status/:id : 
 Updates the completed status of a task in the database. 
 The task to be updated is identified by its ID passed as a parameter in the URL. 
 If an error occurs, a 500 HTTP status code is returned with an error message.
 
-## DELETE /tasks/delete/:id: 
+## DELETE /tasks/delete/:id : 
 Deletes a task from the database. The task to be deleted is identified by its ID passed as a parameter in the URL. 
 If an error occurs, a 500 HTTP status code is returned with an error message.
 
