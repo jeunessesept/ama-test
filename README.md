@@ -64,7 +64,7 @@ RESPONSE
 ------------------------------------
 
 {
-	"info": "task succesfuly added"
+	"info": "task succesfully added"
 }
 ```
 ------------------------------------
@@ -74,11 +74,33 @@ Met à jour le statut terminé d'une tâche dans la base de données.
 La tâche à mettre à jour est identifiée par son ID passé en paramètre dans l'URL. 
 Si une erreur se produit, un code d'état HTTP 500 est renvoyé avec un message d'erreur.
 
+```js
+(put) 
+
+RESPONSE
+------------------------------------
+{
+	"info": "status of the task updated"
+}
+```
+
+------------------------------------
+
 ## DELETE /tasks/delete/:id : 
 Supprime une tâche de la base de données. La tâche à supprimer est identifiée par son ID passé en paramètre dans l'URL. 
 Si une erreur se produit, un code d'état HTTP 500 est renvoyé avec un message d'erreur.
 
+```js
+(delete)
 
+RESPONSE
+-------------------------------------
+{
+	"info": "task deleted succesfully"
+}
+
+```
+--------------------------------------
 
 ### english/ 
 
