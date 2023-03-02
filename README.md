@@ -18,7 +18,27 @@ Si une erreur se produit, un code d'état HTTP 500 est renvoyé avec un message 
 (get) htttps.heroku.myap.com/tasks
 
 ------------------------------------
-(data: ["tetst","task2]
+[
+	{
+		"id": 2,
+		"task": "make a test",
+		"completed": 0,
+		"created_at": "2023-03-02T08:34:09.000Z"
+	},
+	{
+		"id": 3,
+		"task": "make a test",
+		"completed": 0,
+		"created_at": "2023-03-02T08:35:33.000Z"
+	},
+	{
+		"id": 4,
+		"task": "make a test",
+		"completed": 0,
+		"created_at": "2023-03-02T08:35:56.000Z"
+	},
+  ...
+  ]
 ```
 ------------------------------------
 
