@@ -8,6 +8,9 @@ Le serveur importe les packages requis, y compris Express et Body-parser, et se 
 Il utilise ensuite une instance de routeur pour créer des routes API et définir des fonctions qui effectuent des opérations CRUD sur la base de données. 
 Le routeur est ensuite réimporté dans le fichier principal du serveur et monté sur l'endpoint /tasks.
 
+Pour lancer l'application en local : npm run dev
+
+
 Le serveur propose quatre routes pour gérer les données de tâche, vous pouvez accéder à l'API déployé sur Heroku en utilisant ce lien de base :
 
 ### https://ama-test.herokuapp.com/tasks
@@ -112,7 +115,11 @@ The server imports the required packages, including Express and Body-parser, and
 It then uses a router instance to create API routes and define functions that perform CRUD operations on the database. 
 The router is then imported back into the main server file and mounted to the /tasks endpoint.
 
-The server provides four routes for handling task data:
+to run the app on local : npm run dev
+
+The server provides four routes for handling task data, you can test the API using this Heroku link : 
+
+https://ama-test.herokuapp.com/tasks
 
 ## GET /tasks: 
 Retrieves all the tasks stored in the database and returns them as a JSON response. 
